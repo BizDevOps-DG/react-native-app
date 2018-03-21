@@ -15,7 +15,7 @@ jobs:
          command: sudo chmod 777 ./gradlew
       - run:
           name: Download Dependencies
-          command: ./gradlew androidDependencies
+          command: export TERM=xterm && ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
